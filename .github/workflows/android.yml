@@ -1,4 +1,4 @@
-name: Build Android TV Browser APK (UI)
+name: Build Android RemoteClient (UI)
 
 on:
   push:
