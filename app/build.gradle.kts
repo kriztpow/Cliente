@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tvbrowser"
+    namespace = "com.example.remoteclient"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.tvbrowser"
+        applicationId = "com.example.remoteclient"
         minSdk = 30
         targetSdk = 34
         versionCode = 1
