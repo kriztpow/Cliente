@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var imageView: ImageView
     
     // CAMBIA ESTO POR LA IP QUE APAREZCA EN TU XIAOMI
-    private val SERVER_IP = "192.168.1.15" 
+    private val SERVER_IP = "192.168.100.2" 
     private val SERVER_PORT = 8080
 
     override fun onCreate(savedInstanceState: Bundle?) {
