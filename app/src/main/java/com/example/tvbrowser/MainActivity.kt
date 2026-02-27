@@ -1,4 +1,4 @@
-package com.example.tvbrowser
+package com.example.remoteclient
 
 import android.graphics.BitmapFactory
 import android.os.Bundle
