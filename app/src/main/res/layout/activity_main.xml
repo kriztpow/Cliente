@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000">
@@ -11,4 +11,43 @@
         android:scaleType="fitCenter"
         android:contentDescription="Pantalla Remota" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:gravity="center"
+        android:background="#40000000"> <Button
+            android:id="@+id/btnStartRemote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ENCENDER TRANSMISIÓN"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2E7D32" 
+            android:layout_marginEnd="10dp"
+            android:padding="15dp" />
+
+        <Button
+            android:id="@+id/btnStopRemote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="APAGAR TRANSMISIÓN"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#C62828"
+            android:padding="15dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtIpStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:text="Conectado a: 192.168.100.2"
+        android:textColor="#80FFFFFF"
+        android:textSize="10sp" />
+
+</RelativeLayout>
