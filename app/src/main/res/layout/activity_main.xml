@@ -46,10 +46,10 @@
         android:background="#1A1A1A"
         android:padding="5dp">
         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <Button android:id="@+id/btnTglScreen" android:text="PANTALLA" android:textSize="10sp" android:layout_margin="2dp"/>
-            <Button android:id="@+id/btnTglBack" android:text="CAM TRASERA" android:textSize="10sp" android:layout_margin="2dp"/>
-            <Button android:id="@+id/btnTglFront" android:text="CAM FRONTAL" android:textSize="10sp" android:layout_margin="2dp"/>
-            <Button android:id="@+id/btnTglAudio" android:text="AUDIO ON/OFF" android:textSize="10sp" android:layout_margin="2dp"/>
+            <Button android:id="@+id/btnTglScreen" android:text="PANTALLA" android:layout_margin="2dp"/>
+            <Button android:id="@+id/btnTglBack" android:text="CAM TRASERA" android:layout_margin="2dp"/>
+            <Button android:id="@+id/btnTglFront" android:text="CAM FRONTAL" android:layout_margin="2dp"/>
+            <Button android:id="@+id/btnTglAudio" android:text="AUDIO" android:layout_margin="2dp"/>
         </LinearLayout>
     </HorizontalScrollView>
 </LinearLayout>
