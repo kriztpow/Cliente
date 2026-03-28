@@ -28,14 +28,12 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:scaleType="fitCenter"
-                android:layout_margin="1dp"
                 android:background="#222"/>
             <ImageView android:id="@+id/viewFront"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:scaleType="fitCenter"
-                android:layout_margin="1dp"
                 android:background="#222"/>
         </LinearLayout>
     </LinearLayout>
@@ -43,9 +41,8 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#1A1A1A"
-        android:padding="5dp">
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        android:background="#1A1A1A">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="5dp">
             <Button android:id="@+id/btnTglScreen" android:text="PANTALLA" android:layout_margin="2dp"/>
             <Button android:id="@+id/btnTglBack" android:text="CAM TRASERA" android:layout_margin="2dp"/>
             <Button android:id="@+id/btnTglFront" android:text="CAM FRONTAL" android:layout_margin="2dp"/>
