@@ -14,7 +14,7 @@ import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
     // CAMBIA ESTO A LA IP QUE TENGA TU XIAOMI
-    private val XIAOMI_IP = "192.168.100.2" 
+    private val XIAOMI_IP = "192.168.100.3" 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
