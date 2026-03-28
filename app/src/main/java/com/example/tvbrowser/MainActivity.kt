@@ -13,7 +13,7 @@ import java.net.Socket
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
-    private val XIAOMI_IP = "192.168.100.3" 
+    private val XIAOMI_IP = "192.168.100.2" 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
