@@ -13,13 +13,12 @@ import java.net.Socket
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
-    private val XIAOMI_IP = "192.168.100.2" // Asegúrate de que sea la correcta
+    private val XIAOMI_IP = "192.168.100.3" 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Asignación segura de botones
         findViewById<Button>(R.id.btnTglScreen)?.setOnClickListener { enviar("START_SCREEN") }
         findViewById<Button>(R.id.btnTglBack)?.setOnClickListener { enviar("START_BACK") }
         findViewById<Button>(R.id.btnTglFront)?.setOnClickListener { enviar("START_FRONT") }
@@ -28,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         val imgScreen = findViewById<ImageView>(R.id.viewScreen)
         val imgBack = findViewById<ImageView>(R.id.viewBack)
         
-        // Iniciar receptores solo si las vistas existen
         imgScreen?.let { startListener(9000, it) }
         imgBack?.let { startListener(9002, it) }
     }
@@ -37,15 +35,11 @@ class MainActivity : AppCompatActivity() {
         thread {
             val socket = Socket()
             try {
-                // Intenta conectar con un tiempo límite de 2 segundos (Timeout)
                 socket.connect(InetSocketAddress(XIAOMI_IP, 9001), 2000)
                 socket.getOutputStream().write("$cmd\n".toByteArray())
-                socket.close()
             } catch (e: Exception) {
-                e.printStackTrace()
-                // Muestra el error en la tablet sin cerrar la app
                 runOnUiThread {
-                    Toast.makeText(this, "Error de conexión: Xiaomi no responde", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Sin conexión con Xiaomi", Toast.LENGTH_SHORT).show()
                 }
             } finally {
                 try { socket.close() } catch (e: Exception) {}
@@ -73,18 +67,9 @@ class MainActivity : AppCompatActivity() {
                                 }
                             }
                         }
-                    } catch (e: Exception) {
-                        // Error en el flujo de datos (se cortó la conexión)
-                        e.printStackTrace()
-                    } finally {
-                        sock.close()
-                    }
+                    } catch (e: Exception) { e.printStackTrace() } finally { sock.close() }
                 }
-            } catch (e: Exception) {
-                e.printStackTrace()
-            } finally {
-                try { server?.close() } catch (e: Exception) {}
-            }
+            } catch (e: Exception) { e.printStackTrace() } finally { server?.close() }
         }
     }
 }
