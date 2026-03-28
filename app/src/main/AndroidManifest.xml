@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.remoteclient">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@android:drawable/sym_def_app_icon"
-        android:label="TV Screen Client"
-        android:theme="@style/Theme.TVClient"
-        android:usesCleartextTraffic="true"> <activity
+        android:label="Remote Control Pro"
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        android:supportsRtl="true">
+
+        <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait"> <intent-filter>
+            android:screenOrientation="landscape">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 </manifest>
