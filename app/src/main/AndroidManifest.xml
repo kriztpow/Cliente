@@ -8,7 +8,7 @@
         android:allowBackup="false"
         android:icon="@android:drawable/sym_def_app_icon"
         android:label="Remote Control Pro"
-        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        android:theme="@style/Theme.TVClient"
         android:supportsRtl="true">
 
         <activity
